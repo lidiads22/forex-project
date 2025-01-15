@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!-- Coding by CodingNepal || www.codingnepalweb.com -->
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Boxicons CSS -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <title>ForexDash</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar">
+        <div class="logo_item">
+            <i class="bx bx-menu" id="sidebarOpen"></i>
+            <span class="brand-name">ForexDash</span>
+        </div>
+        <div class="search_bar">
+            <input type="text" placeholder="Search" />
+        </div>
+        <div class="navbar_content">
+            <i class="bi bi-grid"></i>
+            <i class='bx bx-sun' id="darkLight"></i>
+            <i class='bx bx-bell'></i>
+        </div>
+    </nav>
+
+    <!-- sidebar -->
+    <nav class="sidebar">
+        <div class="menu_content">
+            <ul class="menu_items">
+                <li class="menu_title menu_dahsboard"><span></span></li>
+                <li class="item">
+                    <a class="nav_link submenu_item">
+                        <span class="navlink_icon"><i class="bx bx-home-alt"></i></span>
+                        <span class="navlink">Home</span>
+                        <i class="bx bx-chevron-right arrow-left"></i>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="#" class="nav_link sublink">Nav Sub Link</a></li>
+                        <li><a href="#" class="nav_link sublink">Nav Sub Link</a></li>
+                        <li><a href="#" class="nav_link sublink">Nav Sub Link</a></li>
+                        <li><a href="#" class="nav_link sublink">Nav Sub Link</a></li>
+                    </ul>
+                </li>
+                <li class="menu_title menu_performance"><span></span></li>
+                <li><a href="#" class="nav_link"><span class="navlink_icon"><i class="bx bxs-magic-wand"></i></span><span class="navlink">Daily Journal</span></a></li>
+                <li><a href="#" class="nav_link"><span class="navlink_icon"><i class="bx bx-loader-circle"></i></span><span class="navlink">Trades</span></a></li>
+                <li><a href="#" class="nav_link"><span class="navlink_icon"><i class="bx bx-filter"></i></span><span class="navlink">Notebook</span></a></li>
+                <li class="menu_title menu_setting"><span></span></li>
+                <li><a href="#" class="nav_link"><span class="navlink_icon"><i class="bx bx-cog"></i></span><span class="navlink">Setting</span></a></li>
+                <li><a href="#" class="nav_link"><span class="navlink_icon"><i class="bx bx-layer"></i></span><span class="navlink">Features</span></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
