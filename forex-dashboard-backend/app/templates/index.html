@@ -1,18 +1,47 @@
 <!DOCTYPE html>
-<!-- Coding by CodingNepal || www.codingnepalweb.com -->
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Boxicons CSS -->
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-    <title>ForexDash</title>
+    <title>Market Mindset</title>
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='calendar.css') }}">
 </head>
 
 <body>
-    <!-- navbar -->
-    <nav class="navbar">
+    <!-- Balance Widget -->
+    <div class="account-balance">
+        <h3>Account Balance</h3>
+        <div id="balanceValue" class="balance-value">$0.00</div>
+    </div>
+
+    <div class="calendar">
+        <div class="calendar-header">
+          <button id="prev-month">‹</button>
+          <div id="month-year"></div>
+          <button id="next-month">›</button>
+        </div>
+        <div class="calendar-body">
+          <div class="calendar-weekdays">
+            <!-- Weekday Names -->
+            <div>Sun</div>
+            <div>Mon</div>
+            <div>Tue</div>
+            <div>Wed</div>
+            <div>Thu</div>
+            <div>Fri</div>
+            <div>Sat</div>
+          </div>
+          <div class="calendar-dates">
+            <!-- Dates will be populated here -->
+          </div>
+
+
+    <!-- Navbar -->
+    <nav class="navbar" aria-label="Main navigation">
         <div class="logo_item">
             <i class="bx bx-menu" id="sidebarOpen"></i>
             <span class="brand-name">ForexDash</span>
@@ -27,23 +56,17 @@
         </div>
     </nav>
 
-    <!-- sidebar -->
-    <nav class="sidebar">
+    <!-- Sidebar -->
+    <nav class="sidebar" aria-label="Sidebar navigation">
         <div class="menu_content">
             <ul class="menu_items">
-                <li class="menu_title menu_dahsboard"><span></span></li>
+                <li class="menu_title menu_dashboard"><span></span></li>
                 <li class="item">
                     <a class="nav_link submenu_item">
                         <span class="navlink_icon"><i class="bx bx-home-alt"></i></span>
                         <span class="navlink">Home</span>
                         <i class="bx bx-chevron-right arrow-left"></i>
                     </a>
-                    <ul class="submenu">
-                        <li><a href="#" class="nav_link sublink">Nav Sub Link</a></li>
-                        <li><a href="#" class="nav_link sublink">Nav Sub Link</a></li>
-                        <li><a href="#" class="nav_link sublink">Nav Sub Link</a></li>
-                        <li><a href="#" class="nav_link sublink">Nav Sub Link</a></li>
-                    </ul>
                 </li>
                 <li class="menu_title menu_performance"><span></span></li>
                 <li><a href="#" class="nav_link"><span class="navlink_icon"><i class="bx bxs-magic-wand"></i></span><span class="navlink">Daily Journal</span></a></li>
@@ -57,6 +80,6 @@
     </nav>
 
     <!-- JavaScript -->
-    <script src="script.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
